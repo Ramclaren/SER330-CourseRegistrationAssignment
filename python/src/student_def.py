@@ -15,7 +15,7 @@ class Student(Person):
     def credits(self):
         total = 0
         for x in self.course_list:
-            total += x.course.credits
+            total += x.credits
         return total
 
     @property
@@ -39,9 +39,8 @@ class Student(Person):
 
     def __str__(self):
         return ('\n' + 'Student Name: ' + self.first_name + ' ' + self.last_name + '\n' +
-            'School: ' + self.school.name + '\n' +
-            'DOB: ' + self.date_of_birth.strftime('%b %d, %Y') + '\n' +
+            'School: ' + self.school + '\n' +
+            'DOB: ' + self.date_of_birth + '\n' +
             'Username: ' + self.username + '\n' +
-            'Email: ' + self.email + '\n' +
             'GPA: ' + str(self.gpa) + '\n' +
             'Credits: ' + str(self.credits) + '\n')

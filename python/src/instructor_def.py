@@ -27,6 +27,6 @@ class Instructor(Person):
 
     def __str__(self):
         return ('\n' + 'Instructor Name: ' + self.first_name + ' ' + self.last_name + '\n' +
-            'School: ' + self.school.name + '\n' +
-            'DOB: ' + self.date_of_birth.strftime('%b %d, %Y') + '\n' +
+            'School: ' + self.school + '\n' +
+            'DOB: ' + self.date_of_birth + '\n' +
             'Username: ' + self.username + '\n')
